@@ -12,13 +12,12 @@ describe("Pokemon class", () => {
 
   const NAME = "charmander";
   const HEALTH = 100;
-  const TYPE = "fire";
-  const WEAKNESSES = [];
+  const TYPE = [];
   const ATTACKS = [];
 
-  const charmander = new Pokemon(NAME, HEALTH, TYPE, WEAKNESSES, ATTACKS);
-  
-  for (let property of ["name", "health", "type", "weaknesses", "attacks"]) {
+  const charmander = new Pokemon(NAME, HEALTH, TYPE, ATTACKS);
+
+  for (let property of ["name", "health", "type", "attacks"]) {
     it(`has a ${property} property`, () => {
       expect(charmander[property]).toBeDefined();
     });
