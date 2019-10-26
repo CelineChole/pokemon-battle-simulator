@@ -12,8 +12,8 @@ describe("Pokemon class", () => {
 
   const NAME = "charmander";
   const HEALTH = 100;
-  const TYPE = [];
-  const ATTACKS = [];
+  const TYPE = ["fire"];
+  const ATTACKS = [{}];
 
   const charmander = new Pokemon(NAME, HEALTH, TYPE, ATTACKS);
 
@@ -22,4 +22,12 @@ describe("Pokemon class", () => {
       expect(charmander[property]).toBeDefined();
     });
   }
+
+  it('must throw if no type is specified', () => {
+    expect(() => { new charmander(NAME, HEALTH, [], ATTACKS)}).toThrow();
+  });
+  
+  it('must throw if no attacks are specified', () => {
+    expect(() => { new charmander(NAME, HEALTH, TYPE, [])}).toThrow();
+  });
 });
