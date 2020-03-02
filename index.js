@@ -15,20 +15,43 @@ class Attack {
     }
 }
 
-// class Play() {
-//     constructor() {
-//     }
-//     pokemonTurn() {
+class Battle {
+    constructor(pokemon1, pokemon2, player1, player2) {
+        this.pokemon1 = pokemon1;
+        this.pokemon2 = pokemon2;
+        this.player1 = player1;
+        this.player2 = player2;
+    }
+    attack(player, pokemon) {
+        
+    }
+    gameState() {
+        
+    }
+    
+}
 
-//     }
-//     winner() {
+class Player {
+    constructor(name, pokemon) {
+        this.name = name;
+        this.pokemon = pokemon;
+    }
+    getAction(name, attackName = "") {
+        if (name === 'skip') {
+            
+        } else if (name === 'defend') {
 
-//     }
-// }
+        } else {
 
-console.log(new Pokemon('Pikachu', 40, 'Electric', new Attack('Catastropika', 'Foudre', 20)))
-console.log(new Pokemon('Bulbasaur', 35, 'Grass', new Attack('Griffe', 10)))
-console.log(new Pokemon('Charmander', 60, 'Fire', new Attack('Griffe', 25)))
+        }
+
+    }
+}
+
+new Pokemon('Pikachu', 40, 'Electric', new Attack('Catastropika', 'Foudre', 20))
+new Pokemon('Bulbasaur', 35, 'Grass', new Attack('Griffe', 10))
+new Pokemon('Charmander', 60, 'Fire', new Attack('Griffe', 25))
+console.log(new Player("Celine", "Charmander"))
 
 module.exports = { Pokemon, Attack }
 
